@@ -1,0 +1,21 @@
+version: '3'
+services:
+   myweb :
+      image: php:7.4-apache
+      volumes:
+         - ./web:/var/www/html
+      ports:
+         - 8080:80
+      container_name: myweb
+   mydb:
+      image: mysql:latest
+      environment:
+         - MYSQL_ROOT_PASSWORD=hogehoge
+         - MYSQL_PORT=3306
+         - MYSQL_DATABASE=members
+         - MYSQL_USER=admin
+         - MYSQL_PASSWORD=fugafuga
+      ports:
+         - 3306:3306
+      container_name: mydb
+

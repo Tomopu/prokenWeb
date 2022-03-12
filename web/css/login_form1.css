@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+div {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 400px;
+    height: 300px;
+    margin: 100px auto;
+    padding: 30px 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+form h1 {
+   padding: 5px 0 15px 0;
+}
+
+.input_field {
+    /* background-color: #f0f0f0; */
+    margin: 15px 0;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-color: black; /* 半径が8pxの角丸 */
+    border-radius: 5px;
+}
+
+.input_field i {
+    vertical-align: top;
+    padding-top: 1px;
+    color: #acacac;
+}
+
+.input_field input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 300px;
+    line-height: 1;
+    font-size: 1.1rem;
+}
+
+.input_field input::placeholder {
+    color: #acacac;
+}
+
+.button_field {
+    margin: 0 auto;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    width: 369px;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #84c2ff;
+}
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+    
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+    form {
+        width: 320px;
+        height: 300px;
+        margin: 100px auto;
+        padding: 30px 10px;
+        border-radius: 10px;
+    }
+    
+    form h1 {
+       padding: 5px 0 15px 0;
+    }
+    
+    .input_field {
+        background-color: #f0f0f0;
+        margin: 15px auto;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    
+    .input_field i {
+        vertical-align: top;
+        padding-top: 1px;
+        color: #acacac;
+    }
+    
+    .input_field input {
+        width: 230px;
+        line-height: 1;
+        font-size: 1.1rem;
+    }
+    
+    .input_field input::placeholder {
+        color: #acacac;
+    }
+    
+    .button_field {
+        margin: 0 auto;
+    }
+    
+    input[type="submit"] {
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        width: 200px;
+        height: 50px;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: #84c2ff;
+    }
+}
+
+
+pre ol li:before {
+    counter-increment: li;
+    content: counter(li)'';
+    text-align: right;
+    display: inline-block;
+    padding-right: 15px;
+    color: #aaaaaa;
+    background-color: white;
+    /* 範囲選択できないようにする */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+pre ol {
+    padding: 10px;
+    border : solid 1px #e6e6e6;
+    /* box-shadow: 0 0 0 1px #e6e6e6; */
+    border-radius: 3px;
+    list-style: none;
+    counter-reset: li;
+    overflow-x: scroll;
+}

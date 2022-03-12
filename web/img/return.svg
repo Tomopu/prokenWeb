@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 723 1024" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<metadata>
+<vectornator:setting key="IsTimeLapseWatermarkDisabled" value="false"/>
+<vectornator:setting key="UndoHistoryDisabled" value="true"/>
+<vectornator:setting key="VNDimensionsVisible" value="true"/>
+<vectornator:setting key="VNSnapToGuides" value="true"/>
+<vectornator:setting key="WDCMYKEnabledKey" value="false"/>
+<vectornator:setting key="WDDisplayWhiteBackground" value="false"/>
+<vectornator:setting key="WDDynamicGuides" value="false"/>
+<vectornator:setting key="WDGuidesVisible" value="true"/>
+<vectornator:setting key="WDIsolateActiveLayer" value="false"/>
+<vectornator:setting key="WDOutlineMode" value="false"/>
+<vectornator:setting key="WDRulersVisible" value="true"/>
+<vectornator:setting key="WDSnapToEdges" value="false"/>
+<vectornator:setting key="WDSnapToGrid" value="false"/>
+<vectornator:setting key="WDSnapToPoints" value="false"/>
+<vectornator:setting key="WDUnits" value="Pixels"/>
+</metadata>
+<defs>
+<clipPath id="TextBounds">
+<rect height="224.158" width="259.692" x="413.401" y="726.084"/>
+</clipPath>
+</defs>
+<g id="return" vectornator:layerName="return">
+<path d="M53.75 0C24.0647 0 0 25.5952 0 57.1562L0 454.844C2.03451e-05 486.405 24.0647 512 53.75 512L139.406 512L139.406 965.656C139.406 998.98 165.232 1026 197.094 1026L665.688 1026C697.549 1026 723.375 998.98 723.375 965.656L723.375 62.3438C723.375 29.0204 697.549 2 665.688 2L244.188 2C239.74 0.732923 235.074 3.09766e-08 230.25 0L53.75 0Z" fill="#b3b3b3" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M53.75 0C24.0647 2.54313e-06 0 23.4013 0 52.25L0 415.75C2.03451e-05 444.599 24.0647 468 53.75 468L139.406 468L139.406 924.25C139.406 956.141 165.232 982 197.094 982L665.688 982C697.549 982 723.375 956.141 723.375 924.25L723.375 59.75C723.375 27.8586 697.549 2 665.688 2L244.875 2C240.224 0.724423 235.321 2.97655e-08 230.25 0L53.75 0Z" fill="#dddddd" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path clip-path="url(#TextBounds)" d="M500.457 917.649C502.892 917.649 504.855 916.904 506.347 915.412C507.838 913.921 508.584 911.988 508.584 909.614C508.584 908.458 508.386 907.423 507.99 906.51C507.595 905.597 507.062 904.775 506.392 904.044L480.004 878.387L457.451 859.029L455.807 863.229L484.113 864.508L600.714 864.508C611.367 864.508 619.052 862.027 623.77 857.066C628.487 852.105 630.846 844.45 630.846 834.102L630.846 780.139C630.846 769.486 628.487 761.801 623.77 757.083C619.052 752.365 611.367 750.007 600.714 750.007L549.581 750.007C547.086 750.007 545.077 750.798 543.555 752.381C542.033 753.963 541.272 755.881 541.272 758.133C541.272 760.385 542.018 762.303 543.509 763.886C545.001 765.468 547.025 766.26 549.581 766.26L600.714 766.26C605.523 766.26 609.023 767.355 611.215 769.547C613.406 771.738 614.502 775.269 614.502 780.139L614.502 834.102C614.502 839.093 613.406 842.7 611.215 844.922C609.023 847.144 605.523 848.255 600.714 848.255L484.113 848.255L455.807 849.442L457.451 853.642L480.004 834.376L506.392 808.718C507.062 807.988 507.595 807.166 507.99 806.253C508.386 805.34 508.584 804.274 508.584 803.057C508.584 800.744 507.838 798.826 506.347 797.305C504.855 795.783 502.892 795.022 500.457 795.022C498.205 795.022 496.257 795.874 494.614 797.578L440.924 850.264C440.011 851.116 439.326 852.059 438.87 853.094C438.413 854.129 438.185 855.225 438.185 856.381C438.185 857.477 438.413 858.542 438.87 859.577C439.326 860.612 440.011 861.586 440.924 862.499L494.614 915.184C496.257 916.827 498.205 917.649 500.457 917.649Z" fill="#b3b3b3" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M446.929 848.376L563.936 848.376L563.936 864.616L446.929 864.616L446.929 848.376Z" fill="#b3b3b3" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

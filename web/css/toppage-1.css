@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+span {
+    display: inline-block;  /* 改行しない */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#main_visual {
+    background-color: #e8f2fb;
+    /* 範囲選択できないようにする */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#visual_flex {
+    display: flex;
+}
+
+#visual_title {
+    width: fit-content;
+    margin: auto;
+    margin-right: 0;
+    color: #1a448f;
+}
+
+.large_title {
+    width: fit-content;
+}
+
+.small_title {
+    width: fit-content;
+    font-size: 9px;
+}
+
+#visual_img {
+    margin: auto;
+    margin-right: 5%;
+    width: fit-content;
+}
+
+#main_visual svg {
+    width: 400px;
+    /* padding-top: 15px; */
+}
+
+.bottom_wave {
+    position: absolute;
+    z-index: -1;
+    /* 範囲選択できないようにする */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+main {
+    margin: 30px 0;
+    padding: 60px 60px;
+}
+
+main h1{
+    font-size: 40px;
+    color: #1a448f;
+    margin-bottom: 10px;
+}
+
+main p {
+    /* line-height: 180%; */
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #2a2a2a;
+}
+
+.article {
+    margin: 80px 0;
+}
+
+#article1 {
+    margin: 120px 0;
+}
+
+.article_flex {
+    display: flex;
+}
+
+.img_box {
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    width: fit-content;
+}
+
+.img_box img{
+    position: relative;
+    width: 500px;
+    z-index: 40;
+}
+
+.img_box svg {
+    width: 150%;
+    height: auto;
+    position: absolute;
+    top: -200px;
+    left: -160px;
+    z-index: -1;
+}
+
+#info_table {
+    background: white;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+}
+
+#info_table th{
+    color: #1a448f;
+    padding: 10px 20px;
+}
+
+#info_table td{
+    padding: 10px 20px;
+}
+
+/* アニメーション */
+@keyframes fuwafuwa-up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fuwafuwa-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+#return_key {
+    width: 60px;
+    position: absolute;
+    z-index: 20;
+    top: -50px;
+    left: -30px;
+    animation-timing-function: ease-in-out;
+    animation: 4s fuwafuwa-up infinite;
+}
+
+#delete_key {
+    width: 60px;
+    position: absolute;
+    z-index: 30;
+    right: -20px;
+    bottom: -10px;
+    animation-timing-function: ease-in-out;
+    animation: 4.5s fuwafuwa-down infinite;
+}
+
+.article_flex section {
+    margin-left: 60px;
+}
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+    .large_title {
+        font-size: 28px;
+    }
+    
+    .small_title {
+        font-size: 9px;
+    }
+
+    #visual_img {
+        margin-right: 2%;
+    }
+
+    #main_visual svg {
+        width: 280px;
+    }
+
+    .img_box img{
+        width: 300px;
+    }
+
+    .img_box svg {
+        width: 180%;
+    }
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+    #visual_flex {
+        display: block;
+    }
+
+    #visual_title {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    .large_title {
+        font-size: 25px;
+    }
+    
+    .small_title {
+        font-size: 7px;
+    }
+
+    #visual_img {
+        margin: 0 5% 0 auto;
+    }
+    
+    #main_visual svg {
+        width: 200px;
+        padding-top: 15px;
+    }
+
+    main {
+        padding: 10px 20px;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+    
+    main p {
+        font-size: 15px;
+    }
+
+    .article_flex {
+        display: block;
+    }
+
+    #article1 {
+        margin: 90px 0;
+    }
+
+    .img_box {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .img_box img{
+        width: 100%;
+    }
+
+    .img_box svg {
+        width: 120%;
+        top: -150px;
+        left: -120px;
+    }
+
+    #return_key {
+        z-index: 20;
+        top: -50px;
+        left: -15px;
+    }
+    
+    #delete_key {
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .article_flex section {
+        margin-left: 0;
+    }
+
+    #info_table th,
+    #info_table td {
+        display: block;
+        padding: 9px;
+    }
+}
+
+/* iphone8よりも小さな画面 */
+@media screen and (max-width: 760px) {
+    #visual_title {
+        width: 80%;
+    }
+}

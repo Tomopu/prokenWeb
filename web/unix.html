@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=2">
+    <!-- css -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/github.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Java Script -->
+    <script src="js/headerNavi.js"></script>
+    <script src="prettify/prettify.js"></script>
+    <!-- <script src="prettify/lang-cl.js"></script> -->
+
+    <title>UNIX / Linuxコマンドについて</title>
+</head>
+<body onload="PR.prettyPrint()">
+    <div id="header_set">
+        <header id="header">
+            <h1 id="header_logo"><a href="/">NIT-KCP</a></h1>
+            <nav id="global_navi">
+                <ul>
+                    <!-- <li><a href="login_form.php">ログイン</a></li> -->
+                    <li><label for="menu" id="open"><i class="material-icons">account_circle</i></label></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- account_menuの表示可否のcheckbox -->
+        <input id="menu" type="checkbox">
+        <!-- account_menu -->
+        <div id="account_menu">
+            <nav>
+                <ul>
+                    <li class="account_name"><p>hogehogeさん</p></li>
+                    <li class="select">
+                        <a>
+                            <i class="material-icons">person_add</i>
+                            アカウントの追加
+                        </a>
+                    </li>
+                    <li class="select">
+                        <a>
+                            <i class="material-icons">key</i>
+                            パスワード変更
+                        </a>
+                    </li>
+                    <li class="logout select">
+                        <a>
+                            <i class="material-icons">logout</i>
+                            ログアウト
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- /account_menu -->
+    </div>
+    
+
+    <div id="main_visual">
+        <h1>Unix / Linuxコマンドについて</h1>
+    </div>
+
+    <div id="wrapper">
+        <!-- main -->
+        <main>
+            <h1 id="heading1">Unix / Linux とは</h1>
+            <div class="text_box">
+                <h3>UNIX</h3>
+                <p><span class="bold">UNIX(ユニックス)</span>は、1969年に AT&T Bell研究所が<span class="bold">アセンブリ言語</span>で開発し、1971年に公開されたOS。その後、1973年にはシステムのほぼ全体がC言語で書き直される。<br>公開当時、UNIX以外のOSはいくつもあったものの、アセンブリ言語からC言語に置き換えたことによって開発や異なる機種への移植が容易になり、教育や実用的に広く使われるようになった。それから現在に至るまで、UNIXはさまざまなUNIX/Linux系OSの基礎となると同時に、その他多くのOSへ影響を与えた。</p>   
+            </div>
+            <div class="text_box">
+                <h3>Linux</h3>
+                <p><span class="bold">Linux(リナックス)</span>は、1991年に学生だったLinus Benedict Torovalds氏が開発した、Unix系(Unix like)のOS。LinuxはUNIXと同等の機能を備えつつ、<span class="bold">オープンソース</span>(自由に入手、使用、開発、改変、再配布ができる)であることが特徴。その後、世界中の開発者たちのボランティアによって開発・維持を続け、オリジナルのLinuxを元に各開発者がカスタマイズした<span class="bold">ディトリビューション</span>が数多く配布されていった。</p>   
+            </div>
+            <img src="img/unix/os.png">
+            <div class="glossary">
+                <h3 class="glossary_title"><i class="material-icons">auto_stories</i>用語集</h3>
+                <div class="text_box">
+                    <h4>アセンブリ言語 (assembly language)</h4>
+                    <p>CPUの処理を命令する機械語に一対一で対応する簡略記憶記号<span class="bold">(ニーモニック)</span>で記述するプログラミング言語。通常、機械語は2進数(0と1)で表記されるため、ニーモニックを用いることで人間が理解しやすくすることを目的としている。<br>(画像 : アセンブリ言語の例)</p>
+<pre>
+main:
+    pushl   %ebp
+    movl    %esp, %ebp 
+    subl    $16, %esp
+    movl    $0, -4(%ebp) 
+    movl    -4(%ebp), %eax 
+    addl    $2, %eax
+    movl    %eax, -4(%ebp) 
+    movl    $0, %eax
+    leave
+    ret
+</pre>
+                </div>
+                <div class="text_box">
+                    <h4>Linus Benedict Torovalds</h4>
+                    <p>フィンランド、ヘルシンキ生まれ (1969年12月28日) ヘルシンキ大学卒業</p>
+                </div>
+
+                <div class="text_box">
+                    <h4>ディストリビューション(distribution)</h4>
+                </div>
+            </div>
+
+
+            <h1 id="heading2">GUI / CUIとは</h1>
+            <div class="text_box">
+                <h3>UI</h3>
+                <p><span class="bold">UI(User Interface)</span>とは、一般的に、ユーザー(User)と、デバイスやサービスとを結びつける(Interface)ものをいう。<br>Webサービスであれば、サイトのデザインやフォントのサイズ、ゲームであれば、ボタンの大きさや操作感など、<span class="bold">見やすさ・使いやすさ</span>に繋がるものがUIにあたる。</p>
+            </div>
+            <div class="text_box">
+                <h3>GUI</h3>
+                <p><span class="bold">GUI(Graphical User Interface)</span>とは、グラフィカル(絵画的)に表現されるUIのこと。画像やアイコンを画面上に表示することで、ユーザーに直感的な操作感を与える。</p>
+            </div>
+            <div class="text_box">
+                <h3>CUI</h3>
+                <p><span class="bold">CUI(Character User Interface)</span>とは、キャラクタ(文字)で表現されるUIのこと。マウスで操作するGUIとは異なり、CUIはキーボードでコマンドを入力して操作する。以降、この記事ではCUIを使用する。</p>
+            </div>
+            <img src="img/unix/gui_cui.png">
+
+
+            <h1 id="heading3">ファイルツリーとは</h1>
+            <div class="text_box">
+                <h3>ファイル</h3>
+                <p><span class="bold">ファイル(file)</span>とは、OSのファイルシステムが管理するひとかたまりのデータの単位のこと。ファイル名や属性、サイズや保護情報など、ファイルの管理情報を付加することで、ユーザーやシステムが管理しやすくなる。</p>
+            </div>
+            <div class="text_box">
+                <h3>ディレクトリ</h3>
+                <p><span class="bold">ディレクトリ(directory)</span>とは、ファイルを階層化して分類・管理するための概念で、ファイルを格納するための入れ物のような振る舞いをする。<br>WindowsやMacOSなどでは、<span class="bold">フォルダ(folder)</span>ともいう。</p>
+            </div>
+            <div class="caution_box">
+                <div class="caution_title"><i class="material-icons">warning_amber</i><h3>CAUTION</h3></div>
+                <p>実際は、OSのファイルシステム上では<span class="bold">ディレクトリも通常のファイル</span>である。属性がディレクトリとなっているだけで、中身にはファイルの管理情報などが格納されている。本題から外れてしまうため詳しい内容は説明しないが、興味のある人はインターネットや書籍で調べてみよう。</p>
+            </div> 
+            <img src="img/unix/dir_file.png">
+
+            <div class="text_box"></div>
+            <div class="tips_box">
+                <div class="tips_title"><i class="material-icons">tips_and_updates</i><h3>POINT</h3></div>
+                <p>ポイント</p>
+            </div>
+
+            <div class="caution_box">
+                <div class="caution_title"><i class="material-icons">warning_amber</i><h3>CAUTION</h3></div>
+                <p>注意</p>
+            </div> 
+        </main>
+        <!-- /main -->
+
+        <!-- aside -->
+        <aside>
+            <div id="widget">
+                <p id="side_menu">目次</p>
+                <ul>
+                   <li><a href="#heading1">Unix / Linux とは</a></li>
+                   <li><a href="#heading2">GUI / CUI とは</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                   <li><a href="#heading1">1. 見出し</a></li>
+                </ul>
+             </div>
+        </aside>
+        <!-- /aside -->
+    </div>
+
+    <footer>
+        <div id="footer_menu">
+            <div id="footer_navi">
+                <h3>SITEMAP</h3>
+                <ul>
+                    <li><a href="css/style.css">style.css</a></li>
+                    <li><a href="css/header.css">header.css</a></li>
+                    <li><a href="css/footer.css">footer.css</a></li>
+                </ul>
+            </div>
+    
+            <div id="footer_portal">
+                <h3>PORTAL</h3>
+                <ul>
+                    <li><a href="https://www.kushiro-ct.ac.jp">釧路高専 公式ウェブサイト</a></li>
+                    <li><a href="https://sites.google.com/view/kpc-nitkc/home?authuser=4">旧 プロ研 ホームページ</a></li>
+                    <li><a href="https://github.co.jp">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div id="cmark">&copy; 2022 National Institute of Technology Kushiro College Programming Circle, All rights reserved. </div>
+    </footer>
+
+</body>
+</html>
