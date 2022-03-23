@@ -1,7 +1,10 @@
 version: '3'
 services:
    myweb :
-      image: php:7.4-apache
+      # image: php:7.4-apache
+      build:
+         context: .
+         dockerfile: ./web/Dockerfile
       volumes:
          - ./web:/var/www/html
       ports:
@@ -9,6 +12,11 @@ services:
       container_name: myweb
    mydb:
       image: mysql:latest
+      # build:
+      #    context: .
+      #    dockerfile: ./db/Dockerfile
+      volumes:
+         - ./db/init:/docker-entrypoint-initdb.d
       environment:
          - MYSQL_ROOT_PASSWORD=hogehoge
          - MYSQL_PORT=3306
