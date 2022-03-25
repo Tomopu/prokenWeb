@@ -6,8 +6,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/toppage.css">
-    <link rel="stylesheet" href="css/list_layout.css">
+    <link rel="stylesheet" href="css/toppage/style.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,10 +17,10 @@
 <body>
     <div id="header_set">
         <header id="header" class="toClear">
-            <h1 id="header_logo"><a href="/">NIT-KCP</a></h1>
+            <h1 id="header_logo"><a href="/">NIT-KPC</a></h1>
             <nav id="global_navi">
                 <ul>
-                    <li><a href="" class="login_button">ログイン</a></li>
+                    <li><a href="login_form.php" class="login_button">ログイン</a></li>
                     <!-- <li><label for="menu" id="open"><i class="material-icons">account_circle</i></label></li> -->
                 </ul>
             </nav>
@@ -60,14 +59,13 @@
     </div>
     
     <div id="main_visual"> 
-        <div id="visual_flex">
-            <div id="visual_title">
-                <h1 class="large_title"><span>釧路高専</span> <span>プログラミング研究会</span></h1>
-                <h3 class="small_title"><span>National Institute of Technology</span> <span>Kushiro College</span> <span>Programming Circle</span></h3>
-                <h2 class="catchphrase">学ぶって、楽しい。</h2>
-            </div>
-            <div id="visual_img">
-                <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 200 200" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div id="visual_title">
+            <h1 class="large_title"><span>釧路高専</span> <span>プログラミング研究会</span></h1>
+            <h3 class="small_title"><span>National Institute of Technology</span> <span>Kushiro College</span> <span>Programming Circle</span></h3>
+            <h2 class="catchphrase">学ぶって、楽しい。</h2>
+        </div>
+        <div id="visual_img">
+            <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 200 200" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <metadata>
                         <vectornator:setting key="IsTimeLapseWatermarkDisabled" value="false"/>
                         <vectornator:setting key="UndoHistoryDisabled" value="true"/>
@@ -142,10 +140,11 @@
                         <path d="M110.584 96.0487C110.561 99.9562 108.735 103.702 105.016 105.299C101.246 106.918 96.348 106.276 93.4296 103.305C91.6257 101.363 90.6411 98.7991 90.681 96.1487C90.6615 94.8638 88.6626 94.8598 88.6821 96.1487C88.6677 98.9952 89.6173 101.763 91.3761 104.001C92.9211 105.86 95.0239 107.172 97.373 107.743C102.076 108.914 107.373 107.518 110.309 103.538C111.835 101.343 112.63 98.7219 112.581 96.0487C112.588 94.7624 110.589 94.7609 110.582 96.0487L110.584 96.0487Z" fill="#211715" fill-rule="evenodd" opacity="1" stroke="none"/>
                         <path d="M88.6825 96.2786C88.7715 100.351 93.6879 102.56 97.0901 103.26C101.182 104.137 105.454 103.46 109.074 101.361C110.923 100.239 112.534 98.4929 112.583 96.2241C112.611 94.9373 110.612 94.9378 110.584 96.2241C110.553 97.6734 109.402 98.7873 108.253 99.5189C106.804 100.417 105.201 101.037 103.525 101.349C100.146 102.037 96.6333 101.507 93.608 99.8532C92.2967 99.1086 90.718 97.9407 90.6815 96.2776C90.654 94.9933 88.6546 94.9888 88.6825 96.2776L88.6825 96.2786Z" fill="#211715" fill-rule="evenodd" opacity="1" stroke="none"/>
                     </g>
-                </svg>
-            </div>
+            </svg>
         </div>
+        
     </div>
+    <img class="bottom_wave" src="img/mv_bottom.svg">
     
     <div id="wrapper">
         <!-- main -->
@@ -154,20 +153,54 @@
                 <div class="img_box">
                     <img class="active_img" src="img/active.jpg">
                 </div>
-                <section>
-                    <h1>あなたも</h1>
-                    <p>主な活動は、4月に1年生対象のC言語の講習会や、オープンキャンパス・高専祭への出典、プログラミングコンテストへの参加・運営のお手伝いをしています。<br>昨年度は遠隔でしたが、3年生の情報や電子で学ぶC言語を、1年生が約3週間でマスターしました。また、U-16プログラミングコンテストでは、例年1年生が全道大会へ進出しています。</p>
+                <section id="section1">
+                    <h1>あなたも一緒に学びませんか？</h1>
+                    <p>プログラミング研究会では、プログラミングなどの興味を持った情報技術を、みんなで楽しく話し合いながら学んでいます。<br>色々な分野の仲間がいるので、普段の授業では学べないような幅広い知識を身につけることができます。</p>
                 <section>
             </article>
-
-            <article id="article2">
-                <p>主な活動は、4月に1年生対象のC言語の講習会や、オープンキャンパス・高専祭への出典、プログラミングコンテストへの参加・運営のお手伝いをしています。<br>昨年度は遠隔でしたが、3年生の情報や電子で学ぶC言語を、1年生が約3週間でマスターしました。また、U-16プログラミングコンテストでは、例年1年生が全道大会へ進出しています。</p>
+            <article class="article_flex" id="article2">
+                <section id="section2">
+                    <p>主な活動は、4月に1年生対象のC言語の講習会や、オープンキャンパス・高専祭への出典、プログラミングコンテストへの参加・運営のお手伝いをしています。<br>昨年度は遠隔でしたが、3年生の情報や電子で学ぶC言語を、1年生が約3週間でマスターしました。また、U-16プログラミングコンテストでは、例年1年生が全道大会へ進出しています。</p>
+                </section>
+                <table id="info_table">
+                    <tr>
+                        <th>研究会名</th>
+                        <td>プログラミング研究会</td>
+                    </tr>
+                    <tr>
+                        <th>会員数</th>
+                        <td>43人　(2020年)</td>
+                    </tr>
+                    <tr>
+                        <th>活動曜日</th>
+                        <td>平日：月曜日 ~ 金曜日　(祝日は休み)</td>
+                    </tr>
+                    <tr>
+                        <th>活動時間</th>
+                        <td>16:40 ~ 18:00　(放課後)</td>
+                    </tr>
+                    <tr>
+                        <th>活動場所</th>
+                        <td>釧路高専 情報棟2F 応用情報処理実験室</td>
+                    </tr>
+                    <tr>
+                        <th>年会費</th>
+                        <td>1,000 円(/年)<br>※会費は必要な機材の購入や、校外での活動費用に使用されます。</td>
+                    </tr>
+                </table>
             </article>
 
             <article id="article3">
+                <section id="section3">
+                    <h1>なにを学べるの？</h1>
+                    <p>C言語やPythonなどといったプログラミング言語をはじめ、ゲーム作成に必要なUnityやBlender、さらには2年生以上の専門授業で学ぶ数学や物理</p>
+                </section>
+                
             </article>
 
             <article id="article4">
+                <h1>作品紹介</h1>
+                <i class="fa-brands fa-github"></i>
             </article>
 
             <article id="article5">
@@ -181,7 +214,7 @@
             <div id="footer_navi">
                 <h3>SITEMAP</h3>
                 <ul>
-                    <li><a href="css/toppage.css">toppage.css</a></li>
+                    <li><a href="css/toppage/style.css">toppage.css</a></li>
                     <li><a href="css/header.css">header.css</a></li>
                     <li><a href="css/footer.css">footer.css</a></li>
                 </ul>
@@ -193,6 +226,7 @@
                     <li><a href="https://www.kushiro-ct.ac.jp">釧路高専 公式ウェブサイト</a></li>
                     <li><a href="https://sites.google.com/view/kpc-nitkc/home?authuser=4">旧 プロ研 ホームページ</a></li>
                     <li><a href="https://github.co.jp">GitHub</a></li>
+                    <li><a href="css/toppage/main_visual.css">main_visual.css</a></li>
                 </ul>
             </div>
         </div>

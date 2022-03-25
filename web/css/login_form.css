@@ -8,6 +8,7 @@
 
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 
 div {
@@ -17,6 +18,21 @@ div {
 
 h1 {
     padding: 10px 0;
+}
+
+.error_msg {
+    width: 201px;
+    background-color: #ffe6e6;
+    padding: 7px 10px;
+    margin: 5px 0 15px 0;
+    border: solid 1px #fdbdbd;
+    border-radius: 4px;
+}
+
+.error_msg p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff5959;
 }
 
 form {
@@ -32,6 +48,17 @@ form {
     border: 0.8px solid;
     border-color: #c7c7c7; /* 半径が8pxの角丸 */
     border-radius: 4px;
+}
+
+#eye_button {
+    position: absolute;
+    left: -100px;
+}
+
+label, i {
+    /* 範囲選択できないようにする */
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #pass_eye {
