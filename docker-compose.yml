@@ -8,9 +8,9 @@ services:
       volumes:
          - ./web:/var/www/html
       # environment:
-      #    - VIRTUAL_HOST=myhp.nitkpc.com
+      #    - VIRTUAL_HOST=www.nitkpc.com
       #    - VIRTUAL_PORT=8080
-      #    - LETSENCRYPT_HOST=my.hpnitkpc.com
+      #    - LETSENCRYPT_HOST=www.nitkpc.com
       ports:
          - 8080:80
       container_name: myweb
