@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=2">
-    <!-- css -->
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/toppage/style.css">
+
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <!-- swiper.js -->
+    <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/toppage/style.css">
+    
     <title>釧路高専　プログラミング研究会</title>
 </head>
 <body>
@@ -144,14 +147,14 @@
         </div>
         
     </div>
-    <img class="bottom_wave" src="img/mv_bottom.svg">
+    <img class="bottom_wave" src="img/toppage/mv_bottom.svg">
     
     <div id="wrapper">
         <!-- main -->
         <main>
             <article class="article_flex" id="article1">
-                <div class="img_box">
-                    <img class="active_img" src="img/active.jpg">
+                <div class="img_container">
+                    <img src="img/toppage/active.jpg">
                 </div>
                 <section id="section1">
                     <h1>あなたも一緒に学びませんか？</h1>
@@ -188,22 +191,82 @@
                         <td>1,000 円(/年)<br>※会費は必要な機材の購入や、校外での活動費用に使用されます。</td>
                     </tr>
                 </table>
-            </article>
-
-            <article id="article3">
-                <section id="section3">
-                    <h1>なにを学べるの？</h1>
-                    <p>C言語やPythonなどといったプログラミング言語をはじめ、ゲーム作成に必要なUnityやBlender、さらには2年生以上の専門授業で学ぶ数学や物理</p>
-                </section>
                 
             </article>
 
-            <article id="article4">
-                <h1>作品紹介</h1>
-                <i class="fa-brands fa-github"></i>
+            <img class="wave" src="img/toppage/wave.svg">
+            <article id="article3">
+                <section id="section3">
+                    <h1>なにを学べるの？</h1>
+                    <p>プログラミング研究会で学べるのは、プログラミング言語だけではありません。ゲーム作成やサーバー構築、Webサイトの制作、さらには情報の専門科目から数学・物理まで...<br>仲間が増えるほど、研究会全体の知識量が増えていきます。</p>
+                </section>
+                <div class="img_container">
+                    <img id="text_mining" src="img/toppage/text_mining.png">
+                </div>
             </article>
 
+            <article class="article_flex" id="article4">
+                <section id="section4_left">
+                    <h1>作品紹介</h1>
+                    <p>私たちのこれまでの作品はこちらからご覧になれます。</p>
+                    <div class="git_link">
+                        <a href="https://github.com/Tomopu/cLang/blob/main/lecture1/hello.c">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                            <span>これまでの作品を見る</span>
+                        </a>
+                    </div>
+                </section>
+                <section id="section4_right">
+                    <h1>入部のご相談も受け付けております</h1>
+                    <p>プログラミング研究会は、あなたの入部をいつでも歓迎しております。もちろん、兼部していただいても構いません。<br>入部しようか迷っている方のために、DiscordのサーバーやTwitterのDMも解放しておりますので、ぜひ気軽にご相談ください。<br>私たちは、あなたと共に学べる日を楽しみにしています。</p>
+                </section>
+            </article>
+            
             <article id="article5">
+                <h1>活動紹介</h1>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img_container">
+                                <img src="img/toppage/active01.jpg">
+                            </div>
+                            <section>
+                                <h2>1. プログラミング学習</h2>
+                                <p>実験室にはパソコンやホワイトボードなどがあり、それらを活用しながら授業の課題や大会に向けてプログラミングを行なっています。<br>自分のノートパソコンを持参する方が多いですが、持っていないという方もプロ研が所有しているものを利用することができるので心配ありません。</p>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_container">
+                                <img src="img/toppage/active02.jpg">
+                            </div>
+                            <section>
+                                <h2>2. オープンキャンパス・高専祭</h2>
+                                <p>プログラミング学習の一環として、毎年開催されるオープンキャンパス・高専祭に作品を展示しています。C言語で作られた作品や、Unityで制作した3Dゲームなど、他の仲間が作った個性あふれる作品をみることができます。自分の技術力を他の人に伝えられるとてもよい機会です。来場者の方々に自分の作品を発表しましょう。</p>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_container">
+                                <img src="img/toppage/active03.jpg">
+                            </div>
+                            <section>
+                                <h2>3. 高専プロコン</h2>
+                                <p>毎年10月に開催される「全国高等専門学校プログラミングコンテスト」に参加しています。高専プロコンでは3つの部門があり、与えられたテーマに従いながら、チームで約半年に渡って作品を制作します。チーム開発をすることの大変さや、新しい技術との出会いなど、確実に自分をスキルアップにつながります。</p>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_container">
+                                <img src="img/toppage/active04.jpg">
+                            </div>
+                            <section>
+                                <h2>4. U-16プロコン 釧路大会</h2>
+                                <p>新1年生(16歳以下)の会員の方には、毎年秋に行われる「U-16プログラミングコンテスト」に参加していただきます。数回にわたり大会に関する講習会なども実施していますので、自信がない方も安心してください。釧路大会で上位3位に入賞した方は全国大会に出場することができ、毎年プロ研からも1年生が進出しています。</p>
+                            <section>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </article>
         </main>
         <!-- /main -->
@@ -236,5 +299,18 @@
 
     <!-- Java Script -->
     <script src="js/headerNavi.js"></script>
+    <!-- <script src="js/slider.js"></script> -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            pagination: {
+                el: ".swiper-pagination"
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    </script>
 </body>
 </html>

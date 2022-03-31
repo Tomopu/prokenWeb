@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#article2 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#section2 {
+    max-width: 500px;
+    margin-right: 60px;
+}
+
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+    #article2 {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    #section2 {
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+    #section2 {
+        width: 100%;
+    }
+}

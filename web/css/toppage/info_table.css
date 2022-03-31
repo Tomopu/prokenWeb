@@ -34,22 +34,14 @@
 
 /* タブレットよりも小さな画面 */
 @media screen and (max-width: 960px) {
-    
+    #info_table {
+        min-width: 100%;
+    }
 }
 
 /* スマホよりも小さな画面 */
 @media screen and (max-width: 760px) {
     #info_table {
-        min-width: auto;
+        width: 100%;
     }
-
-    /* #info_table th,
-    #info_table td {
-        display: block;
-        padding: 9px;
-    }
-
-    #info_table th {
-        text-align: left;
-    } */
 }

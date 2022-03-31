@@ -2,6 +2,11 @@
 
 @import url("./main_visual.css");
 @import url("./info_table.css");
+@import url("./article/article1.css");
+@import url("./article/article2.css");
+@import url("./article/article3.css");
+@import url("./article/article4.css");
+@import url("./article/article5.css");
 
 * {
     margin: 0;
@@ -16,7 +21,12 @@ span {
 main h1{
     font-size: 30px;
     color: #1a448f;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    color: #1a448f;
+    margin-bottom: 5px;
 }
 
 main p {
@@ -31,13 +41,12 @@ main p {
     display: flex;
 }
 
-.img_box {
-    position: relative;
+.img_container {
     margin: auto 0;
     width: fit-content;
 }
 
-.img_box img{
+.img_container img{
     width: 500px;
 }
 
@@ -45,74 +54,58 @@ article {
     padding: 0 60px;
 }
 
-#article1 {
+.wave {
+    width: 100%;
+    vertical-align: bottom;
+    /* 範囲選択できないようにする */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.git_link {
+    padding: 7px 10px;
+    margin: 10px 0;
     width: fit-content;
-    margin: 20px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #485c64;
 }
 
-#section1 {
-    max-width: 450px;
-    margin-left: 60px;
+.git_link:hover {
+    background-color: #6a8691;
 }
 
-#article2 {
-    width: fit-content;
-    margin: 0 auto;
+.git_link a {
+    font-size: 17px;
+    padding-left: 2px;
+    text-decoration: none;
+    color: white;
 }
 
-#section2 {
-    max-width: 450px;
-    margin-right: 60px;
+.git_link span {
+    padding-left: 5px;
 }
 
-#article3 {
-    height: 600px;
-    background-size: 500px;
-}
-
-#section3 {
-    width: 450px;
-    padding: 30px;
-    background-color: aliceblue;
-}
-
-#article4 {
-    height: 500px;
-    background-color: #173f83;
+.git_link svg {
+    width: 30px;
+    fill: white;
+    vertical-align: middle;
 }
 
 /* @media screen and (max-width: 1168px) {
-    .img_box img{
+    .img_container img{
         width: 360px;
     }
 } */
 
 /* タブレットよりも小さな画面 */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) { 
 
-    #article1 {
-        flex-direction: column-reverse;
-    }
-
-    #section1 {
-        margin: 0;
-        margin-bottom: 25px;
-    }
-
-    #article2 {
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-
-    #section2 {
-        margin-bottom: 25px;
-    }
-
-    .img_box {
+    .img_container {
         width: 100%;
     }
 
-    .img_box img{
+    .img_container img{
         width: 100%;
     }
 
@@ -126,30 +119,22 @@ article {
     
     main p {
         font-size: 14px;
+        line-height: 23px;
     }
 
     article {
         padding: 0 20px;
     }
-
-    #article1 {
-        margin: 30px 0;
-    }
-
-    #section1 {
-        margin-left: 0;
-    }
-
-    #section2 {
-        width: 100%;
-    }
-
-    #info_table {
-        width: 100%;
-    }
 }
 
 /* iphone8よりも小さな画面 */
 @media screen and (max-width: 760px) {
+    main h1 {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
 
+    main h2 {
+        font-size: 18px;
+    }
 }

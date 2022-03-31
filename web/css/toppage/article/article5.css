@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+#article5 {
+    background-color: #f3f4f5;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.swiper-wrapper {
+    margin: 10px auto 30px auto;
+}
+
+.swiper-slide {
+    display: flex;
+    background-color: white;
+}
+
+.swiper-slide  .img_container{
+    width: fit-content;
+    margin: 0;
+    padding: 20px;
+}
+
+.swiper-slide section {
+    max-width: 100%;
+    padding: 20px 45px 20px 0;
+}
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+    .swiper-slide{
+        flex-direction: column;
+    }
+
+    .swiper-slide section {
+        padding: 0 20px 20px 20px;
+    }
+
+    .swiper-button-prev {
+        top: 55%;
+    }
+    
+    .swiper-button-next {
+        top: 55%;
+    }
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+
+}
