@@ -7,13 +7,16 @@ services:
          dockerfile: ./web/Dockerfile
       volumes:
          - ./web:/var/www/html
-      # environment:
-      #    - VIRTUAL_HOST=www.nitkpc.com
-      #    - VIRTUAL_PORT=8080
-      #    - LETSENCRYPT_HOST=www.nitkpc.com
+      environment:
+         - VIRTUAL_HOST=www.nitkpc.com
+         - VIRTUAL_PORT=80
+         - LETSENCRYPT_HOST=www.nitkpc.com
       ports:
-         - 8080:80
+         - 80
       container_name: myweb
+      networks:
+         - proxy-network
+         - db-internal
    mydb:
       image: mysql:latest
       volumes:
@@ -27,4 +30,11 @@ services:
       ports:
          - 3306:3306
       container_name: mydb
+      networks:
+        - db-internal
 
+networks:
+  default:
+  proxy-network:
+    external: true
+  db-internal:
