@@ -3,7 +3,6 @@
 #article4 {
     padding: 30px auto;
     background-color: #f3f4f5;
-    padding-bottom: 30px;
 }
 
 #section4_left {
@@ -14,6 +13,12 @@
 #section4_right {
     width: 600px;
     margin: auto auto auto 0;
+}
+
+#section4_right .flex_container{
+    margin-top: 10px;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
 }
 
 /* タブレットよりも小さな画面 */

@@ -37,7 +37,7 @@ main p {
     color:#535d60;
 }
 
-.article_flex {
+.flex_container {
     display: flex;
 }
 
@@ -62,7 +62,27 @@ article {
     -webkit-user-select: none;
 }
 
-.git_link {
+.square_button {
+    padding: 7px 10px;
+    margin: 10px 0;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.square_button span {
+    padding-left: 5px;
+}
+
+.square_button a {
+    font-size: 17px;
+    padding-left: 2px;
+    text-decoration: none;
+    color: white;
+}
+
+.github {
     padding: 7px 10px;
     margin: 10px 0;
     width: fit-content;
@@ -71,23 +91,41 @@ article {
     background-color: #485c64;
 }
 
-.git_link:hover {
+.github:hover {
     background-color: #6a8691;
 }
 
-.git_link a {
-    font-size: 17px;
-    padding-left: 2px;
-    text-decoration: none;
-    color: white;
-}
-
-.git_link span {
-    padding-left: 5px;
-}
-
-.git_link svg {
+.github svg {
     width: 30px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.discord {
+    background-color: #546cfc;
+    margin-right: 30px;
+}
+
+.discord:hover {
+    background-color: #6e83fe;
+}
+
+.discord svg {
+    width: 30px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.twitter {
+    background-color: #20a4f4;
+}
+
+.twitter:hover {
+    background-color: #5ab8f3;
+}
+
+.twitter svg {
+    width: 29px;
     fill: white;
     vertical-align: middle;
 }
