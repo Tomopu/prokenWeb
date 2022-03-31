@@ -27,12 +27,10 @@ footer h3 {
 
 footer a{
     text-decoration: none;
-    color: black;
 }
 
-/*　ホバー時に下線を追加 */
-footer a:hover {
-    border-bottom: 1px solid black;
+footer .flex_container {
+    display: flex;
 }
 
 #footer_menu {
@@ -40,9 +38,24 @@ footer a:hover {
 }
 
 #footer_navi, #footer_portal {
-    padding-top: 35px;
     padding-left: 10%;
     vertical-align:top;
+}
+
+#footer_navi {
+    margin-top: 35px;
+}
+
+#footer_portal {
+    padding-top: 35px;
+}
+
+#footer_portal a {
+    color: black;
+}
+
+#footer_portal a:hover {
+    border-bottom: 1px solid black;
 }
 
 #cmark {
@@ -56,9 +69,58 @@ footer a:hover {
     color: gray;
 }
 
+.circle_button {
+    width: fit-content;
+    padding: 9px 9px 8px 9px;
+    margin-right: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.github {
+    background-color: #485c64;
+}
+
+.github:hover {
+    background-color: #6a8691;
+}
+
+.github svg {
+    width: 30px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.twitter {
+    background-color: #20a4f4;
+}
+
+.twitter:hover {
+    background-color: #5ab8f3;
+}
+
+.twitter svg {
+    width: 29px;
+    fill: white;
+    vertical-align: middle;
+}
+
+.youtube {
+    background-color: #f0342c;
+}
+
+.youtube:hover {
+    background-color: #f06560;
+}
+
+.youtube svg {
+    width: 30px;
+    fill: white;
+    vertical-align: middle;
+}
+
 /* スマホよりも大きい画面 */
 @media screen and (min-width: 760px) {
-   
     footer li {
         font-size: 15px;
         font-weight: 300;
@@ -76,15 +138,15 @@ footer a:hover {
     }
 
     #footer_navi, #footer_portal {
-        padding-top: 35px;
         padding-left: 10%;
         display: inline-block;
     }
-
 }
  
 /* タブレットよりも大きい画面 */
 @media screen and (min-width: 960px) {
-
+    #footer_navi {
+        margin-top: 35px;
+    }
 }
  

@@ -82,25 +82,6 @@ article {
     color: white;
 }
 
-.github {
-    padding: 7px 10px;
-    margin: 10px 0;
-    width: fit-content;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #485c64;
-}
-
-.github:hover {
-    background-color: #6a8691;
-}
-
-.github svg {
-    width: 30px;
-    fill: white;
-    vertical-align: middle;
-}
-
 .discord {
     background-color: #546cfc;
     margin-right: 30px;
@@ -116,29 +97,8 @@ article {
     vertical-align: middle;
 }
 
-.twitter {
-    background-color: #20a4f4;
-}
-
-.twitter:hover {
-    background-color: #5ab8f3;
-}
-
-.twitter svg {
-    width: 29px;
-    fill: white;
-    vertical-align: middle;
-}
-
-/* @media screen and (max-width: 1168px) {
-    .img_container img{
-        width: 360px;
-    }
-} */
-
 /* タブレットよりも小さな画面 */
 @media screen and (max-width: 960px) { 
-
     .img_container {
         width: 100%;
     }
@@ -146,7 +106,6 @@ article {
     .img_container img{
         width: 100%;
     }
-
 }
 
 /* スマホよりも小さな画面 */
