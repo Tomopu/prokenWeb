@@ -16,9 +16,6 @@ services:
       container_name: myweb
    mydb:
       image: mysql:latest
-      # build:
-      #    context: .
-      #    dockerfile: ./db/Dockerfile
       volumes:
          - ./db/init:/docker-entrypoint-initdb.d
       environment:
