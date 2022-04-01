@@ -70,13 +70,13 @@
 
 /* スマホよりも小さな画面 */
 @media screen and (max-width: 760px) {
+    #main_visual {
+        flex-direction: column;
+    }
 
     #visual_title {
-        margin-left: 20px;
-        position: absolute;
-        z-index: 100;
-        /* margin: 0 auto; */
-        /* margin-top: 30px; */
+        margin: 0 auto;
+        margin-top: 30px;
     }
     
     .large_title {
@@ -88,17 +88,13 @@
     }
 
     #visual_img {
-        opacity: 0.5;
-    }
-
-    /* #visual_img {
         margin: 0 5% 0 auto;
     }
     
     #main_visual svg {
         width: 200px;
         padding-top: 15px;
-    } */
+    }
 }
 
 /* iphone8よりも小さな画面 */

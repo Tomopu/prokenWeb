@@ -34,6 +34,7 @@
     }
 
     .swiper-slide section {
+        height: fit-content;
         padding: 0 20px 20px 20px;
     }
 
