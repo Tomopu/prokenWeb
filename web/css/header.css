@@ -64,7 +64,7 @@ header a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #4b4b4b;
+    color: #535d60;
 }
 
 #header_logo {
@@ -114,6 +114,7 @@ header li {
 
 #account_menu {
     width: 190px;
+    color:#535d60;
     margin-top: 1px;
     padding-bottom: 10px;
     border-radius: 5px; /* 角を丸める */
@@ -145,7 +146,12 @@ header li {
 }
 
 #account_menu .select:hover {
-    background-color: #ecf4f4;
+    background-color: #e8f2fb;
+}
+
+.select a {
+    text-decoration: none;
+    color:#535d60;
 }
 
 #account_menu .account_name {

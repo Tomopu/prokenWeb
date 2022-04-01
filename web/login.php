@@ -1,6 +1,9 @@
 <?php
 session_start();
-$userid = $_POST['userid'];
+// セッションIDを再設定(セッションハイジャック対策)
+session_regenerate_id(true);
+
+$userid = htmlspecialchars($_POST['userid'], ENT_QUOTES, "UTF-8");
 //　データベースへの接続
 require("dbconnect.php");
 
@@ -10,12 +13,14 @@ $stmt->bindValue(':userid', $userid, PDO::PARAM_STR);
 $stmt->execute();
 $member = $stmt->fetch();
 
-if($_POST['passwd'] == $member['passwd']){
+if(htmlspecialchars($_POST['passwd'], ENT_QUOTES, "UTF-8") == $member['passwd']){
     $_SESSION['userid'] = $member['userid'];
-    header('Location:index.html');
+    $_SESSION['permit'] = $member['permit'];
+    header('Location:index.php');
 } else {
     $msg = 'メールアドレスもしくはパスワードが間違っています。';
-    header('Location:login_form.php?msg='. $msg);
+    $_SESSION['msg'] = $msg;
+    header('Location:login_form.php');
     exit();
 }
 ?>

@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-div {
+main div {
     /* 親要素の幅を子要素に合わせる */
     width: fit-content;
 }
@@ -20,24 +20,8 @@ h1 {
     padding: 10px 0;
 }
 
-.error_msg {
-    width: 201px;
-    background-color: #ffe6e6;
-    padding: 7px 10px;
-    margin: 5px 0 15px 0;
-    border: solid 1px #fdbdbd;
-    border-radius: 4px;
-}
-
-.error_msg p {
-    font-size: 12px;
-    font-weight: 400;
-    color: #ff5959;
-}
-
 form {
     width: fit-content; /* 親要素の幅を子要素に合わせる */
-    margin: 100px auto;
     padding: 0 50px;
 }
 
