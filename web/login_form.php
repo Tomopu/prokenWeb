@@ -20,16 +20,23 @@
     <form action="login.php" method="post">
         <h1>Log in</h1>
         <?php
-            if(isset($_SESSION['msg'])){
-                echo '<div class="error_msg">';
-                echo '<p>';
-                echo $_SESSION['msg'];
-                echo '</p>';
-                echo '</div>';
-            }
-            // 後片付け
-            $_SESSION = array();  // セッションの中身を削除
-            session_destroy();    // セッションを破壊
+        if(isset($_SESSION['success_msg'])){
+            echo '<div class="success_msg">';
+            echo '<p>';
+            echo $_SESSION['success_msg'];
+            echo '</p>';
+            echo '</div>';
+        }
+        if(isset($_SESSION['msg'])){
+            echo '<div class="error_msg">';
+            echo '<p>';
+            echo $_SESSION['msg'];
+            echo '</p>';
+            echo '</div>';
+        }
+        // 後片付け
+        unset($_SESSION['msg']);
+        unset($_SESSION['success_msg']);
         ?>
         <div class="input_field">
             <input type="text" name="userid" placeholder="ユーザーID" required>
@@ -49,7 +56,6 @@
     </footer>
 
     <!-- Java Script -->
-    <script src="js/headerNavi.js"></script>
     <script src="js/passEye.js"></script>
 </body>
 </html>

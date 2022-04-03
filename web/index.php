@@ -51,12 +51,12 @@ $permit = $_SESSION['permit'];
                     <?php
                     if($permit == 0){
                         echo '<li class="select">';
-                        echo '  <a><i class="material-icons">person_add</i>アカウントの追加</a>';
+                        echo '  <a href="registry_form.php"><i class="material-icons">person_add</i>アカウントの追加</a>';
                         echo '</li>';
                     }
                     ?>
                     <li class="select">
-                        <a><i class="material-icons">key</i>パスワード変更</a>
+                        <a href="resetting_form.php"><i class="material-icons">key</i>パスワード変更</a>
                     </li>
                     <li class="logout select">
                         <a href="logout.php"><i class="material-icons">logout</i>ログアウト</a>

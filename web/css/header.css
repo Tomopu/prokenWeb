@@ -166,12 +166,12 @@ header li {
 }
 
 /* account_menuの設定 */
-input[type="checkbox"] {
+#menu {
     position: absolute;
     left: -50vw;
 }
 
-input[type="checkbox"]:checked ~ #account_menu {
+#menu:checked ~ #account_menu {
     right: 20px;
 }
 

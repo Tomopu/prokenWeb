@@ -11,28 +11,20 @@ body {
     overflow-x: hidden;
 }
 
-div {
+main div {
     /* 親要素の幅を子要素に合わせる */
     width: fit-content;
 }
 
 h1 {
+    font-size: 25px;
     padding: 10px 0;
 }
 
-.success_msg {
-    width: 201px;
-    background-color: #e7e7e7;
-    padding: 7px 10px;
-    margin: 5px 0 15px 0;
-    border: solid .5px gray;
-    border-radius: 4px;
-}
-
-.success_msg p {
-    font-size: 12px;
-    font-weight: 400;
-    color: #535d60;
+h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 9px;
 }
 
 .error_msg {
@@ -52,7 +44,7 @@ h1 {
 
 form {
     width: fit-content; /* 親要素の幅を子要素に合わせる */
-    margin: 100px auto;
+    margin: 10px auto 40px auto;
     padding: 0 50px;
 }
 
@@ -65,7 +57,7 @@ form {
     border-radius: 4px;
 }
 
-#eye_button {
+.eye_button {
     position: absolute;
     left: -100px;
 }
@@ -76,7 +68,7 @@ label, i {
     -webkit-user-select: none;
 }
 
-#pass_eye {
+.pass_eye {
     position: absolute;
     top: 11px;
     right: 8px;
@@ -110,9 +102,70 @@ input[type="submit"] {
     font-size: 15px;
     /* background-color: #0062ff; */
     background-color: #4cbcac;
+
 }
 
 input[type="submit"]:hover {
     /* background-color: #448cff; */
     background-color: #4ed8c3;
+}
+
+.flex_container {
+    display: flex;
+    margin-top: 4px;
+}
+
+.radio_buttons {
+    width: 192px;
+    margin: 6px 0 20px 0;
+    padding: 6px 20px 6px 10px;
+    border: .5px solid #c7c7c7;
+    border-radius: 4px;
+}
+
+.radio_buttons p {
+    font-family: 'Open+Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #535d60;
+}
+
+.radio_buttons input {
+    margin-right: 8px;
+}
+
+.help_button {
+    /* vertical-align: middle;
+    margin-bottom: 3px; */
+    font-size: 20px;
+    color: #bfbfbf;
+}
+
+.help_container {
+    position: relative;
+    margin-left: 10px;
+}
+
+.help_box {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: none;
+    width: 180px;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-size: 13px;
+    background-color: #ededed;
+}
+
+#admin_help:hover + #admin_help_box {
+    display: block;
+}
+
+#member_help:hover + #member_help_box {
+    display: block;
+}
+
+#guest_help:hover + #guest_help_box {
+    display: block;
 }
