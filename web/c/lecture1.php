@@ -22,40 +22,42 @@
     <title>C言語 第1回</title>
 </head>
 <body onload="PR.prettyPrint()">
-    <div id="header_set">
+<div id="header_set">
         <header id="header">
             <h1 id="header_logo"><a href="/">NIT-KPC</a></h1>
             <nav id="global_navi">
                 <ul>
-                    <!-- <li><a href="login_form.php">ログイン</a></li> -->
-                    <li><label for="menu" id="open"><i class="material-icons">account_circle</i></label></li>
+                    <?php
+                    if(isset($_SESSION['userid'])){
+                        echo'<li><label for="menu" id="open"><i class="material-icons">account_circle</i></label></li>';
+                    }else{
+                        echo'<li><a href="../login_form.php" class="login_button">ログイン</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>
+
         <!-- account_menuの表示可否のcheckbox -->
         <input id="menu" type="checkbox">
+
         <!-- account_menu -->
         <div id="account_menu">
             <nav>
                 <ul>
-                    <li class="account_name"><p>hogehogeさん</p></li>
+                    <li class="account_name"><?php echo $userid; ?>さん</li>
+                    <?php
+                    if($permit == 0){
+                        echo '<li class="select">';
+                        echo '  <a href="registry_form.php"><i class="material-icons">person_add</i>アカウントの追加</a>';
+                        echo '</li>';
+                    }
+                    ?>
                     <li class="select">
-                        <a>
-                            <i class="material-icons">person_add</i>
-                            アカウントの追加
-                        </a>
-                    </li>
-                    <li class="select">
-                        <a>
-                            <i class="material-icons">key</i>
-                            パスワード変更
-                        </a>
+                        <a href="resetting_form.php"><i class="material-icons">key</i>パスワード変更</a>
                     </li>
                     <li class="logout select">
-                        <a>
-                            <i class="material-icons">logout</i>
-                            ログアウト
-                        </a>
+                        <a href="logout.php"><i class="material-icons">logout</i>ログアウト</a>
                     </li>
                 </ul>
             </nav>
