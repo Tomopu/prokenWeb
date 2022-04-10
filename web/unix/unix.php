@@ -23,7 +23,7 @@ $permit = $_SESSION['permit'];
 
     <script src="../prettify/prettify.js"></script>
 
-    <title>UNIX / Linuxコマンドの基礎知識</title>
+    <title>UNIX / Linuxの基礎知識</title>
 </head>
 <body onload="PR.prettyPrint()">
     <div id="header_set">
