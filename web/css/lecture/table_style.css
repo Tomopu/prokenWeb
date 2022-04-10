@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+main table {
+    width: 100%;
+    border: 1px solid #485c64;
+}
+
+main tr, main td {
+    table-layout: fixed;
+    border: .5px solid #485c64;
+}   
+
+main table td {
+    text-align: center;
+}

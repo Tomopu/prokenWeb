@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.tips_box {
+    position: relative;
+    padding: 13px 15px;
+    margin: 20px 0;
+    border: 2.5px solid #84ccc4;
+    border-radius: 6px;
+}
+
+.tips_title {
+    position: absolute;
+    padding: 0 8px 0 6px;
+    display: flex;
+    background-color: white;
+    color: #84ccc4;
+    top: -20px;
+    left: 5px;
+}
+
+.tips_box i {
+    padding-top: 6px;
+    padding-right: 3px;
+}
+
+.tips_box h3 {
+    padding-top: 4px;
+    color: #84ccc4;
+}
+
+.tips_box li, .caution_box li {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 29px;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+    .tips_box li, .caution_box li {
+        font-size: 12px;
+        line-height: 23px;
+    }
+}

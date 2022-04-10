@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+aside {
+    width: 300px;
+    min-width: 300px;
+    margin: 0 35px;
+}
+
+#widget {
+    height: 500px;
+    position: sticky;    /* スクロール追尾 */
+    top: 15%;
+    padding: 20px;
+    background-color: white;
+    list-style: none;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.03);
+}
+
+#widget ul {
+    list-style: none;
+}
+
+#widget li {
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+#widget a {
+    cursor :pointer;
+    text-decoration: none;
+    color: #485c64;
+}
+
+#widget a:hover {
+    border-bottom: 1px solid black;
+}
+
+#widget .list_indent {
+    margin-left: 10px;
+    padding: 2px 0;
+}
+
+#widget .list_indent a {
+    color: #b3b8b9;
+}
+
+#widget .list_indent a:hover {
+    color: #485c64;
+}
+
+#side_menu{
+    font-weight: 600;
+    color: #485c64;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #edf4fa;
+}

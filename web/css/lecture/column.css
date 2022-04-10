@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.column {
+    margin-bottom: 40px;
+    padding: 0 15px 10px 15px;
+    border-left: 4px solid #83e0b9;
+}
+
+.column_title {
+    color: #79cca9;
+}
+
+.column i {
+    vertical-align: top;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.column section {
+    margin: 15px 0 30px 0;
+}
+
+.column .last_item {
+    margin-bottom: 0;
+}
+
+.column section h4 {
+    padding-bottom: 5px;
+}

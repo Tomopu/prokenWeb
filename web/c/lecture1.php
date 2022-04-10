@@ -150,6 +150,25 @@ int main(void){
                 <p>この段階で実行結果か期待通りのものでなければ、再度手順1に戻りソースコードを修正する。</p>
             </div>
             <img src="../img/c/lecture1/programming.png">
+            <div class="glossary">
+                <h3 class="glossary_title">
+                    <i class="material-icons">auto_stories</i>
+                    リファレンス
+                </h3>
+                <div class="text_box last_box">
+                    <h4>参考文献とおすすめのサイト</h4>
+                    <p>
+                        <a href="https://www.amazon.co.jp/コンパイラ-未来へつなぐ-デジタルシリーズ-24-佐渡/dp/4320123441">佐渡一広他 未来へつなぐデジタルシリーズ24 コンパイラ(共立出版)</a>
+                        : (
+                        <a href="https://syllabus.kosen-k.go.jp/Pages/PublicSyllabus?school_id=03&department_id=11&subject_id=0070&year=2019&lang=ja">4Jコンパイラ</a>
+                        の教科書)
+                    </p>
+                    <p>
+                        低レイヤを知りたい人のためのCコンパイラ作成入門: 
+                        <a href="https://www.sigbus.info/compilerbook">https://www.sigbus.info/compilerbook</a>
+                    </p>
+                </div>
+            </div>
 
             <h1 id="heading3">3. C言語を書いてみる</h1>
             <div class="text_box">
