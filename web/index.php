@@ -298,7 +298,7 @@ $permit = $_SESSION['permit'];
                 <h3>PORTAL</h3>
                 <ul>
                     <li><a href="https://www.kushiro-ct.ac.jp">釧路高専 公式ウェブサイト</a></li>
-                    <li><a href="https://knct-kpc.github.io">旧 プロ研 ホームページ</a></li>
+                    <li><a href="https://knct-kpc.github.io/index-1.html">旧 プロ研 ホームページ</a></li>
                     <li><a href="https://procon.946oss.net">U-16プログラミングコンテスト 釧路大会</a></li>
                 </ul>
             </div>
