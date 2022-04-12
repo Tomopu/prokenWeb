@@ -21,6 +21,7 @@ $permit = $_SESSION['permit'];
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- JavaScript -->
     <script src="../prettify/prettify.js"></script>
 
     <title>UNIX / Linuxの基礎知識</title>
@@ -135,17 +136,16 @@ main:
                         <p>CUIを使う最大のメリットは、<span class="bold">一度に多くの処理ができる</span>ということです。<br>後ほど詳しく説明しますが、<span class="bold">正規表現</span>や<span class="bold">論理演算子</span>を用いることで、たとえば、一度に100個のファイルを作成することができます。<br>CUIに慣れないうちは操作が大変かもしれませんが、使いこなせれば作業効率が大幅に上がりますので、なるべく早く慣れるために普段からCUIを使用するよう心がけましょう。</p>
                     </div> 
                 </section>
-                <!-- 注意ボックス -->
                 <img src="../img/unix/gui_cui.png">
             </article>
 
             <article id="article3">
                 <h1>3. ファイルツリーとは</h1>
-                <section class="section6">
+                <section id="section6">
                     <h3 class="sub_heading">ファイル</h3>
                     <p>OSのファイルシステムが管理するひとかたまりのデータの単位のことを<span class="bold">ファイル(file)</span>といいます。<br>ファイル名や属性、サイズや保護情報など、データにファイルの管理情報を付加することで、ユーザーやシステムがデータを管理しやすくなります。</p>
                 </section>
-                <section class="section7">
+                <section id="section7">
                     <h3 class="sub_heading">ディレクトリ</h3>
                     <p><span class="bold">ディレクトリ(directory)</span>とは、ファイルを階層化して分類・管理するための概念で、ファイルを格納するための入れ物のような振る舞いをします。<br>WindowsやMacOSなどでは、<span class="bold">フォルダ(folder)</span>ともいいます。</p>
                     <div class="caution_box">
@@ -154,7 +154,7 @@ main:
                     </div> 
                 </section>
                 
-                <section class="section8">
+                <section id="section8">
                     <h3 class="sub_heading">ファイルツリー</h3>
                     <p>上でも述べた通り、ディレクトリとファイルは階層構造になっており、それぞれが接続関係を持っています。UNIXにおけるこの関係は、あるディレクトリから枝分かれをしてファイルを枝の先の葉とした<span class="bold">木(tree)</span>に見立てることができ、これを<span class="bold">木構造(tree structure)</span>、特にこの場合では<span class="bold">ファイルツリー(file tree)</span>といいます。<br>ここでは、この記事を作成するにあたって参考にした書籍になぞって、ディレクトリとファイルを以下のような記号で表すことにします。</p>
                 </section>
@@ -178,12 +178,41 @@ main:
                 <img src="../img/unix/current_dir.png">
             </article>
             <article id="article4">
-                <h1>4. ターミナル / シェルとは</h1>
+                <h1>4. ファイルの指定法</h1>
                 <section id="section12">
+                    <h3 class="sub_heading">親と子</h3>
+                    <p>ファイルツリーにおいて、あるディレクトリから見て自分自身と接続関係をもち、自分自身よりも階層が1つ下にあるファイルやディレクトリのことを<span class="bold">子(child)</span>と呼びます。また、それとは逆に、自分自身と接続関係を持ちながら1つ上の階層にあるディレクトリのことを<span class="bold">親(parent)</span>といいます。<br>たとえば、以下のようなファイルツリーでは<span class="bold">user1</span>にとって、<span class="bold">dir1</span>や<span class="bold">dirM</span>は子であり、<span class="bold">home</span>は親となります。<br>なお、親と子の関係の間には以下のような制約があることに注意してください。</p>
+                    <section>
+                        <li>同じ親を持つファイルやディレクトリ同士の名前は、互いにユニーク(一意的)である</li>
+                        <li>一般に、ファイルは必ず親を持ち、子を持つことはない</li>
+                        <li>ルートディレクトリは親を持たない</li>
+                    </section>
+                </section>
+                <img src="../img/unix/command/parent_and_child.png">
+                <section id="section13">
+                    <h3 class="sub_heading">絶対パス名</h3>
+                    <p>あるファイルの場所を指定する方法の1つとして、ルートディレクトリを基準にファイル名への道すじをトップダウンに表記した<span class="bold">絶対パス名(absolute pathname)</span>があります。<span class="bold">/</span>を最初に書くことでルートディレクトリを表し、そこから目的のファイルに至るまでに辿るディレクトリを、空白を使わずに<span class="bold">/</span>で区切って表記します。<br>たとえば、上の図でfile1を指定する絶対パス名は<span class="bold">/home/user1/dir1/file1</span>になり、file2を指定する絶対パス名は<span class="bold">/home/user1/dirM/file2</span>となります。</p>
+                </section>
+                <section id="section14">
+                    <h3 class="sub_heading">絶対パス名の略記方法</h3>
+                    <p>ルートディレクトリからホームディレクトリまでを表す絶対パス名は、<span class="bold">ティルド(tilde)</span>という記号<span class="bold">~</span>に置き換えることができます。<br>たとえば、上の図でuser1というアカウントでログインをしている場合、<span class="bold">user1</span>がホームディレクトリとなり、<span class="bold">/home/user1/</span>を<span class="bold">~</span>と表せるため、<span class="bold">/home/user1/dir1/file1</span>は<span class="bold">~/dir1/file1</span>と省略することができます。</p>
+                    <div class="caution_box">
+                        <div class="caution_title no-select"><i class="material-icons">warning_amber</i><h3>CAUTION</h3></div>
+                        <p>user1以外のアカウント名でログインした場合、/home/user1/dir1/file1を絶対パス名で省略するには、user1のというディレクトリ名を指定して<span class="bold">~/user1/dir1/file1</span>と表記しなければいけないことに注意しましょう。<br>ホームディレクトリ名と同じアカウント名でログインした場合のみ、ホームディレクトリ名を省略することができます。</p>
+                    </div> 
+                </section>
+                <section id="section15">
+                    <h3 class="sub_heading">相対パス名</h3>
+                    <p>絶対パスではルートディレクトリを基準としてパス名を表記していましたが、それに対し、カレントディレクトリを基準にしてファイルの場所を記述する方法を<span class="bold">相対パス(relative pathname)</span>といいます。<br><span class="bold">.</span>記号はカレントディレクトリを表し、親のディレクトリは<spann class="bold">..</spann>で表します。<br>上の図でdir1をカレントディレクトリとした時のfile1は<span class="bold">./file1</span>と表記し、<span class="bold">./</span>を省略して単に<span class="bold">file1</span>と表すこともできます。また、dir1をカレントディレクトリとしてfile2を表すには、<span class="bold">../dir2/file2</span>のように記述します。</p>
+                </section>
+            </article>
+            <article id="article5">
+                <h1>5. ターミナル / シェルとは</h1>
+                <section id="section16">
                     <h3 class="sub_heading">ターミナル(端末)</h3>
                     <p><span class="bold">ターミナル(terminal)</span>とは、GUI上でCUIを利用するソフトウェアのことです。<br>OSによってターミナルのアプリケーションの名前は異なりますが、どれも同じような動作をするので問題ありません。UbuntuやMacOSなどは標準でUNIX / Linuxコマンドを使えますが、Windowsの場合は<span class="bold">WSL(Windows Subsystem for Linux)</span>を有効にする必要があります。</p>
                 </section>
-                <section id="section12">
+                <section id="section17">
                     <h3 class="sub_heading">シェル</h3>
                     <p><span class="bold">シェル(shell)</span>とは、ターミナルに打ち込んだコマンドをOSの中核部分である<span class="bold">カーネル(kernel)</span>へ伝達する「橋渡し役」のソフトウェアです。有名なものでは<span class="bold">Bash</span>や<span class="bold">Z Shell</span>などがあります。</p>
                 </section>
@@ -192,11 +221,11 @@ main:
             <article class="article5">
                 <h1>参考文献</h1>
                 <section>
-                    <li>株式会社インターフェイス. Interface 2019年5月号 あなたの知らないモダンOSの世界. CQ出版社</li>
-                    <li>渡辺成良. 若月光夫. 織田健. UNIXコンピュータリテラシー―ネットワーク時代の計算機利用とモラル 第2版. 共立出版</li>
-                    <li>佐渡一広. 寺島美昭. 水野忠則. 未来へつなぐデジタルシリーズ 24 コンパイラ. 共立出版</li>
-                    <li>末永貴一. 第2回 ディストリビューションとは | Linux技術者. LPI-Japan. https://lpi.or.jp/lpic_all/linux/intro/intro02.shtml</li>
-                    <li>@tadsan. シェル、ターミナル、コンソール、コマンドライン. Qiita. 2015-09-23. https://qiita.com/tadsan/items/441dcd910537d3f408e5</li>
+                    <li>株式会社インターフェイス, Interface 2019年5月号 あなたの知らないモダンOSの世界, CQ出版社.</li>
+                    <li>渡辺成良, 若月光夫, 織田健, UNIXコンピュータリテラシー―ネットワーク時代の計算機利用とモラル 第2版, 共立出版.</li>
+                    <li>佐渡一広, 寺島美昭, 水野忠則, 未来へつなぐデジタルシリーズ 24 コンパイラ, 共立出版.</li>
+                    <li>末永貴一, 第2回 ディストリビューションとは | Linux技術者, LPI-Japan, https://lpi.or.jp/lpic_all/linux/intro/intro02.shtml./li>
+                    <li>@tadsan, シェル、ターミナル、コンソール、コマンドライン, Qiita, 2015-09-23, https://qiita.com/tadsan/items/441dcd910537d3f408e5.</li>
                 </section>
             </article>
         </main>
@@ -221,9 +250,14 @@ main:
                    <li class="list_indent"><a href="#section9">ホームディレクトリ</a></li>
                    <li class="list_indent"><a href="#section10">ルートディレクトリ</a></li>
                    <li class="list_indent"><a href="#section11">カレントディレクトリ</a></li>
-                   <li><a href="#article4">4. ターミナル / シェルとは</a></li>
-                   <li class="list_indent"><a href="#section12">ターミナル(端末)</a></li>
-                   <li class="list_indent"><a href="#section13">シェル</a></li>
+                   <li><a href="#article4">4. ファイルの指定法</a></li>
+                   <li class="list_indent"><a href="#section12">親と子</a></li>
+                   <li class="list_indent"><a href="#section13">絶対パス名</a></li>
+                   <li class="list_indent"><a href="#section14">絶対パス名の略記方法</a></li>
+                   <li class="list_indent"><a href="#section15">相対パス名</a></li>
+                   <li><a href="#article5">5. ターミナル / シェルとは</a></li>
+                   <li class="list_indent"><a href="#section16">ターミナル(端末)</a></li>
+                   <li class="list_indent"><a href="#section17">シェル</a></li>
                    <li><a href="#article5">参考文献</a></li>
                 </ul>
              </div>
@@ -237,7 +271,7 @@ main:
                 <h3>PORTAL</h3>
                 <ul>
                     <li><a href="https://www.kushiro-ct.ac.jp">釧路高専 公式ウェブサイト</a></li>
-                    <li><a href="https://knct-kpc.github.io">旧 プロ研 ホームページ</a></li>
+                    <li><a href="https://knct-kpc.github.io/index-1.html">旧 プロ研 ホームページ</a></li>
                     <li><a href="https://procon.946oss.net">U-16プログラミングコンテスト 釧路大会</a></li>
                 </ul>
             </div>
