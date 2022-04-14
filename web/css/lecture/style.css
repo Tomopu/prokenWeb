@@ -75,6 +75,10 @@ main p {
     font-weight: 400;
 }
 
+main a {
+    color: #0d66ff;
+}
+
 article {
     margin-top: 60px;
 }

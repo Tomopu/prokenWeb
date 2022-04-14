@@ -2,14 +2,43 @@
 
 main table {
     width: 100%;
-    border: 1px solid #485c64;
+    color: #485c64;
+    border-spacing: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-collapse: collapse;
+    /* border: 1px solid #485c64; */
 }
 
-main tr, main td {
-    table-layout: fixed;
+main table tr:nth-child(even) {
+    background-color: #d5d5d5;
+}
+
+
+main table th, 
+main table td {
     border: .5px solid #485c64;
+    padding: 10px 0;
 }   
 
-main table td {
+main table th {
+    font-size: 15px;
     text-align: center;
+}
+
+main table td {
+    font-size: 14px;
+}
+
+/* タブレットよりも小さな画面 */
+@media screen and (max-width: 960px) {
+    #info_table {
+        min-width: 100%;
+    }
+}
+
+/* スマホよりも小さな画面 */
+@media screen and (max-width: 760px) {
+    #info_table {
+        width: 100%;
+    }
 }

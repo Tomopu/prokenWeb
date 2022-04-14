@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url("./humberger.css");
+
 #header_set {
     position: fixed;    /*fixedで上部固定*/
     z-index: 999;       /* 最前面へ */
@@ -64,11 +66,11 @@ header a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    color: #535d60;
+    color: #485c64;
 }
 
 #header_logo {
-    color: #4b4b4b;
+    color: #485c64;
     margin: 0 20px;
     padding: 5px 0;
     font-size: 20px;
@@ -103,7 +105,7 @@ header ul {
 }
 
 header li {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 13px;
     font-size: 17px;
 }
 
@@ -114,16 +116,14 @@ header li {
 
 #account_menu {
     width: 190px;
-    color:#535d60;
+    color: #485c64;
     margin-top: 1px;
     padding-bottom: 10px;
     border-radius: 5px; /* 角を丸める */
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);  /* 外枠の影 */
-
     /* 位置を絶対値指定に */
     position: absolute;
     right: -500px;
-
     background-color: white;
 }
 
@@ -151,7 +151,7 @@ header li {
 
 .select a {
     text-decoration: none;
-    color:#535d60;
+    color:#485c64;
 }
 
 #account_menu .account_name {
@@ -183,10 +183,6 @@ header li {
         margin: 0 50px;
         padding: 10px 0;
         font-size: 25px;
-    }
-
-    #global_navi {
-        margin: 0 50px 0 auto;
     }
 }
 

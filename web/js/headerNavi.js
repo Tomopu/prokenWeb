@@ -13,6 +13,9 @@ function ScrollAnime() {
 
 	var header = document.getElementById('header');
 
+	var menu = document.getElementById('menu').checked;
+    var humberger = document.getElementById('humberger').checked;
+
     //ヘッダーの出し入れをするs
     if(scroll === beforePos) {
 	//IE11対策で処理を入れない
@@ -28,7 +31,7 @@ function ScrollAnime() {
 
 	// main_visual上ではheaderを透明にする
 	if(elemTop > scroll) {
-		if(header.classList.contains('toOpacity')){
+		if(header.classList.contains('toOpacity') && !menu && !humberger){
 			//ヘッダーが上から出現する
 			header.classList.remove('toOpacity');
 			header.classList.add('toClear');
@@ -65,7 +68,14 @@ window.addEventListener('DOMContentLoaded', function() {
 	ChangeMainVisualPaddingTop();
 });
 
-// 画面のサイズ変更時のイベントリスナー
-window.addEventListener('resize', function() {
+var header = document.getElementById('header');
+
+// コンストラクタとコールバック
+const observer = new ResizeObserver((entries) => {
 	ChangeMainVisualPaddingTop();
 });
+
+if (header) {
+  // 要素のリサイズを監視
+  observer.observe(header);
+}
