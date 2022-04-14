@@ -115,7 +115,7 @@ $permit = $_SESSION['permit'];
                     <h3 class="sub_heading">Linux</h3>
                     <p><span class="bold">Linux(リナックス)</span>は、1991年に学生だったLinus Benedict Torovalds氏が開発した、Unix系(Unix like)のOSで、LinuxはUNIXと同等の機能を備えつつ、<span class="bold">オープンソース</span>(自由に入手、使用、開発、改変、再配布ができる)であることが特徴です。<br>その後、世界中の開発者たちのボランティアによって開発・維持を続け、オリジナルのLinuxを元に各開発者がカスタマイズした<span class="bold">ディトリビューション</span>が数多く配布されています。</p>   
                 </section>
-                <img src="../img/unix/os_family.png">
+                <img src="../img/unix/os.png">
                 <div class="column">
                     <h3 class="column_title"><i class="material-icons">auto_stories</i>用語集</h3>
                     <section>
@@ -223,7 +223,6 @@ main:
                     <h3 class="sub_heading">絶対パス名</h3>
                     <p>あるファイルの場所を指定する方法の1つとして、ルートディレクトリを基準にファイル名への道すじをトップダウンに表記した<span class="bold">絶対パス名(absolute pathname)</span>があります。<span class="bold">/</span>を最初に書くことでルートディレクトリを表し、そこから目的のファイルに至るまでに辿るディレクトリを、空白を使わずに<span class="bold">/</span>で区切って表記します。<br>たとえば、上の図でfile1を指定する絶対パス名は<span class="bold">/home/user1/dir1/file1</span>になり、file2を指定する絶対パス名は<span class="bold">/home/user1/dirM/file2</span>となります。</p>
                 </section>
-                <img src="../img/unix/absolute_pathname.png">
                 <section id="section14">
                     <h3 class="sub_heading">絶対パス名の略記方法</h3>
                     <p>ルートディレクトリからホームディレクトリまでを表す絶対パス名は、<span class="bold">ティルド(tilde)</span>という記号<span class="bold">~</span>に置き換えることができます。<br>たとえば、上の図でuser1というアカウントでログインをしている場合、<span class="bold">user1</span>がホームディレクトリとなり、<span class="bold">/home/user1/</span>を<span class="bold">~</span>と表せるため、<span class="bold">/home/user1/dir1/file1</span>は<span class="bold">~/dir1/file1</span>と省略することができます。</p>
@@ -234,9 +233,8 @@ main:
                 </section>
                 <section id="section15">
                     <h3 class="sub_heading">相対パス名</h3>
-                    <p>絶対パスではルートディレクトリを基準としてパス名を表記していましたが、それに対し、カレントディレクトリを基準にしてファイルの場所を記述する方法を<span class="bold">相対パス(relative pathname)</span>といいます。<br><span class="bold">.</span>記号はカレントディレクトリを表し、親のディレクトリは<spann class="bold">..</spann>で表します。<br>上の図でdir1をカレントディレクトリとした時のfile1は<span class="bold">./file1</span>と表記し、<span class="bold">./</span>を省略して単に<span class="bold">file1</span>と表すこともできます。また、dir1をカレントディレクトリとしてfile2を表すには、<span class="bold">../dirM/file2</span>のように記述します。</p>
+                    <p>絶対パスではルートディレクトリを基準としてパス名を表記していましたが、それに対し、カレントディレクトリを基準にしてファイルの場所を記述する方法を<span class="bold">相対パス(relative pathname)</span>といいます。<br><span class="bold">.</span>記号はカレントディレクトリを表し、親のディレクトリは<spann class="bold">..</spann>で表します。<br>上の図でdir1をカレントディレクトリとした時のfile1は<span class="bold">./file1</span>と表記し、<span class="bold">./</span>を省略して単に<span class="bold">file1</span>と表すこともできます。また、dir1をカレントディレクトリとしてfile2を表すには、<span class="bold">../dir2/file2</span>のように記述します。</p>
                 </section>
-                <img src="../img/unix/rerative_pathname.png">
             </article>
             <article id="article5">
                 <h1>5. ターミナル / シェルとは</h1>
