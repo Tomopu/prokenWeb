@@ -114,7 +114,11 @@ $permit = $_SESSION['permit'];
 
             <section>
                 <h2>C言語講習会</h2>
-                <li><a href="c/lecture1.php">第1回 "Hello World"</a></li>
+                <li><a href="./c/lecture1.php">第1回 "Hello World"</a></li>
+                <li><a href="./download/lecture2.pdf">第2回 C言語のルール (pdf)</a></li>
+                <li><a href="./download/lecture3.pdf">第3回 変数 (pdf)</a></li>
+                <li><a href="./download/lecture4.pdf">第4回 さまざまな演算 (pdf)</a></li>
+                <li><a href="./download/lecture5.pdf">第5回 条件分岐 (pdf)</a></li>
                 <li><a href="">準備中</a></li>
             </section>
             
@@ -127,7 +131,8 @@ $permit = $_SESSION['permit'];
                 <h2>推薦・参考文献</h2>
                 <section>
                     <h3>C言語</h3>
-                    <li>大川内隆朗, 大原竜男, プログラミングの教科書シリーズ かんたん C言語 [改訂2版], 技術評論社.</li>
+                    <li>大川内隆郎, 大原竜男, かんたん C言語 [改訂2版], 技術評論社, 2017.</li>
+                    <li>筧捷彦, 高田大二 他, 入門 C 言語, 実教出版株式会社, 2019.</li>
                 </section>
                 
             </section>

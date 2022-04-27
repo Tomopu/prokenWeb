@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 session_start();
 $userid = $_SESSION['userid'];
 $permit = $_SESSION['permit'];
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -24,7 +24,7 @@ $permit = $_SESSION['permit'];
     <!-- JavaScript -->
     <script src="../prettify/prettify.js"></script>
 
-    <title>C言語 第1回</title>
+    <title>C言語 第2回</title>
 </head>
 <body onload="PR.prettyPrint()">
     <div id="header_set">
@@ -32,13 +32,14 @@ $permit = $_SESSION['permit'];
             <h1 id="header_logo"><a href="/">NIT-KPC</a></h1>
             <nav id="global_navi">
                 <ul>
-                    <?php
+                    <!-- <?php
                     if(isset($_SESSION['userid'])){
                         echo'<li><label for="menu" id="open"><i class="material-icons">account_circle</i></label></li>';
                     }else{
-                        echo'<li><a href="../login_form.php" class="login_button">ログイン</a></li>';
+                        echo'<li><a href="login_form.php" class="login_button">ログイン</a></li>';
                     }
-                    ?>
+                    ?> -->
+                    <li><a href="login_form.php" class="login_button">ログイン</a></li>
                     <li id="humberger_icon">
                         <label for="humberger"><img src="../img/humberger.svg"></label>
                     </li>
@@ -99,87 +100,130 @@ $permit = $_SESSION['permit'];
     </div>
 
     <div id="main_visual">
-        <h1>C言語 第1回 "Hello World"</h1>
+        <h1>C言語 第2回 C言語のルール</h1>
     </div>
 
     <div id="wrapper">
         <!-- main -->
         <main>
             <article id="article1">
-                <h1>1. はじめに</h1>
+                <h1>1. 前回のおさらい</h1>
                 <section id="section1">
-                    <h3 class="sub_heading">プログラミング言語の歴史</h3>
-                    <p>私たちは日頃、日本語などの言語を用いて情報を伝達するように、コンピュータ0と1で構成される<span class="bold">機械語(Machine Language)</span>を用いて情報を処理する。しかし、機械語はCPU(中央処理装置)の種類によって内容が大きく異なることに加え、0と1の組み合わせをルールに則って膨大な量を記述することは困難である。<br>そこで、人間にも比較的理解しやすい<span class="bold">アセンブリ言語(assembly language)</span>を用いて記述し、それを機械語に変換するという仕組みが考案された。<span class="bold">アセンブリ言語</span>とは、機械語に１対１で対応する<span class="bold">簡略記憶記号(ニーモニック)</span>で記述するプログラミング言語である。その後、アセンブリ言語よりも簡単に複雑な処理を記述できるよう、C言語をはじめとする様々なプログラミング言語が開発されてきた。<br>アセンブリ言語の例:</p>
-<pre>
-main:
-    pushl   %ebp
-    movl    %esp, %ebp 
-    subl    $16, %esp
-    movl    $0, -4(%ebp) 
-    movl    -4(%ebp), %eax 
-    addl    $2, %eax
-    movl    %eax, -4(%ebp) 
-    movl    $0, %eax
-    leave
-    ret
-</pre>  
-                </section>
-                <div class="column">
-                    <h3 class="column_title"><i class="material-icons">auto_stories</i>コラム</h3>
-                    <div class="text_box last_box">
-                        <h4>自然言語と人工言語</h4>
-                        <p>日本語や英語など、自然発生的にできた言語を<span class="bold">自然言語(Natuarl Language)</span>というのに対し、プログラミング言語など、ある情報を伝える目的のために人間が作り出した言語を<span class="bold">人工言語(Artificial Language)</span>という。</p>
-                    </div>
-                </div>
-                <section id="section2">
-                    <h3 class="sub_heading">C言語とは</h3>
-                    <p><span class="bold">C言語(C language)</span>とは、1972年にAT&Tベル研究所がUNIXの移植性を高めるために開発されたプログラミング言語で、自然言語に近い形で記述できる高水準言語でありながら、メモリ管理などのハードウェアの制御が行なえる低水準言語としても動作するという特徴を持つ。<br>名前の由来は、<span class="bold">B言語(B language)</span>を後継する言語として開発されたからである。<br>以下にC言語のソースコード例を挙げるが、現時点で各行の内容を理解する必要はない。</p>
+                    <p>前回は"Hello World"と呼ばれる、C言語の一番基礎となる構文を扱いました。</p>
+                    <h3>ソースコード(source cord)</h3>
 <pre class="prettyprint lang-c">
 #include &lt;stdio.h&gt;
 
-int calc(int x, int y){
-    return x+y;
-}
-    
 int main(void){
-    int x = 0;
-    int y = 10;
-    int ans = calc(x, y);
-
-    printf("%d + %d = %d", x, y, ans);
+    printf("Hello World!!\n");
     return 0;
 }
-</pre>   
-                </section>
+</pre>
+                    <div class="git_link">
+                        <a href="https://github.com/Tomopu/cLang/blob/main/lecture1/hello.c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>ソースコードをダウンロード</a>
+                    </div>
+                    <h3>コンパイルと実行</h3>
+<pre>
+$ gcc hello.c -o hello
+ 
+$ ls
+   hello.c  hello
+    
+$ ./hello
+   Hello World!!
+</pre>
+                <!-- ポイントボックス -->
                 <div class="tips_box">
-                    <div class="tips_title"><i class="material-icons">tips_and_updates</i><h3>POINT</h3></div>
-                    <li>コンピュータは機械語という言語で動く。</li>
-                    <li>機械語を人間が扱うのは困難なため、アセンブリ言語やC言語などのプログラミング言語が開発され、それらを後から機械語に変換するという仕組みが考案された。</li>
-                    <li>C言語は高水準言語でありながら、メモリなどを直接扱える低水準言語の特徴も持つ。</li>
+                    <div class="tips_title no-select"><i class="material-icons">tips_and_updates</i><h3>POINT</h3></div>
+                    <p>print( ) のなかに “好きな文字列” を入れると画面に表示される</p>
                 </div>
+                </section>
             </article>
 
             <article id="article2">
-                <h1>2. プログラムを実行するまでの流れ</h1>
-                <p>プログラムを作成することを<span class="bold">プログラミング(programming)</span>といい、プログラミング言語で書かれたプログラムを<span class="bold">ソースコード(source code)</span>または<span class="bold">コード</span>という。一般に、C言語のプログラムを実行するには以下の流れで決まった手順を行う必要がある。</p>
+                <h1>2. 各命令の意味</h1>
+                <p>この章では、前回書いたプログラムの一つひとつの命令がどのような意味を持っているのかを見ていきます。</p>
+                <section id="section2">
+                    <h3 class="sub_heading">#include &lt;stdio.h&gt;</h3>
+                    <p>まずは、1行目に書かれている命令についてです。</p>
+                    <pre class="prettyprint lang-c">#include &lt;stdio.h&gt;</pre>
+                    <p>ここで使われている英単語はそれぞれ、</p>
+                    <ul>
+                        <li>include【他動】: 〜含める, 包含する</li>
+                        <li>stdio (Standard Input Output)：標準入出力</li>
+                        <li>.h : header file の拡張子</li>
+                    </ul>
+                    <p>という意味を持ちます。つまり、この一文は</p>
+                    <!-- ポイントボックス -->
+                    <div class="tips_box">
+                        <div class="tips_title no-select"><h3> #include &lt;stdio.h&gt;の意味</h3></div>
+                        <p>stdio.h という名前のヘッダファイルをプログラムの中に含んでね！！</p>
+                    </div>
+                    <p>という命令になります。</p>
+                </section>
+
                 <section id="section3">
-                    <h3 class="sub_heading">1. プログラムの作成</h3>
-                    <p>C言語のプログラムは、拡張子が「.c」であるファイルを作成し、<span class="bold">テキストエディタ</span>などでソースコードを記述することで作成できる。</p>
-                    <pre>$ touch ファイル名.c</pre>
-                    <p><span class="bold">拡張子</span>とは、ファイルの種類を識別するためにファイル名の末尾に付けられる文字列のことで、<span class="bold">.c</span>の他に<span class="bold">.txt .exe .xlsx .docx</span>などがある。この状態のファイルは人間が読み書きをするためのものであるため、このままの形式ではコンピュータは実行できない。</p>
+                    <h3 class="sub_heading">2. main関数</h3>
+                    <p>3行目の命令をmain関数といいます。</p>
+                    <pre class="prettyprint lang-c">int main(void){}</pre>
+                    <img src="../img/c/lecture2/main_function.png" style="margin: 0;">
+                    <p>C言語では、主にmain関数の波括弧{ }で囲まれた部分から実行されます。</p>
+                    <ul>
+                        <li>int (integer)【名】: 整数</li>
+                        <li>void 【形】: 空っぽの,  中身のない</li>
+                    </ul>
+                    <!-- ポイントボックス -->
+                    <div class="tips_box">
+                        <div class="tips_title no-select"><h3>main関数の意味</h3></div>
+                        <p>準備ができたら、{  }で囲まれた部分からプログラムを実行してね！！</p>
+                    </div>
+                    <p>なお、関数とintについては、後ほど詳しく説明します。</p>
+
+                    <div class="hidden_box">
+                        <label for="label"><i class="material-icons">add</i>インデントとは</label>
+                        <input type="checkbox" id="label"/>
+                        <!--非表示ここから-->
+                        <div class="hidden_show">
+                            <section id="section4">
+                                <h3 class="sub_heading">インデント(ソースコードの読みやすさ)</h3>
+                                <p>関数などの後にくる波括弧{ }の間を<span class="bold">ブロック(block)</span>といい、ソースコードを見やすくするためにブロック内の行頭を字下げすることを<span class="bold">インデント(indent)</span>と呼びます。</p>
+                                <img src="../img/c/lecture2/indent.png" style="margin: 15px 0;">
+                                <p>例えば、上の図では左がインデントあり、右がインデントなしのソースコードです。見比べてみてどちらが読みやすいでしょうか？<br>一般的にインデントをすることで、その命令がどの関数などに含まれているかが分かりやすくなります。また、プログラムは個人ばかりではなくチームで開発することもしばしばあります。そのため、自分以外の誰でも読みやすいと感じるソースコードを書くという心がけが必要となります。</p>
+                                <!-- ポイントボックス -->
+                                <div class="tips_box">
+                                    <div class="tips_title no-select"><h3>インデント</h3></div>
+                                    <p>{  } の間に命令を記述する際に字下げすることを インデント という
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                        <!--ここまで-->
+                    </div>
+
+                    <div class="hidden_box">
+                        <label for="label2"><i class="material-icons">add</i>関数とは</label>
+                        <input type="checkbox" id="label2"/>
+                        <!--非表示ここから-->
+                        <div class="hidden_show">
+                            <section id="section5">
+                                <h3 class="sub_heading">インデント(ソースコードの読みやすさ)</h3>
+                                <p>関数などの後にくる波括弧{ }の間を<span class="bold">ブロック(block)</span>といい、ソースコードを見やすくするためにブロック内の行頭を字下げすることを<span class="bold">インデント(indent)</span>と呼びます。</p>
+                                <img src="../img/c/lecture2/indent.png" style="margin: 15px 0;">
+                                <p>例えば、上の図では左がインデントあり、右がインデントなしのソースコードです。見比べてみてどちらが読みやすいでしょうか？<br>一般的にインデントをすることで、その命令がどの関数などに含まれているかが分かりやすくなります。また、プログラムは個人ばかりではなくチームで開発することもしばしばあります。そのため、自分以外の誰でも読みやすいと感じるソースコードを書くという心がけが必要となります。</p>
+                                <!-- ポイントボックス -->
+                                <div class="tips_box">
+                                    <div class="tips_title no-select"><h3>インデント</h3></div>
+                                    <p>{  } の間に命令を記述する際に字下げすることを インデント という
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+                        <!--ここまで-->
+                    </div>
                 </section>
+
                 <section id="section4">
-                    <h3 class="sub_heading">2. コンパイル</h3>
-                    <p>C言語のプログラムが作成できたら、それを実行できる形にするために<span class="bold">コンパイル(compile)</span>という作業を行う必要がある。コンパイルとは、プログラムを機械語に翻訳(変換)することをいい、C言語の場合<span class="bold">C/C++コンパイラ(compiler)</span>というソフトウェアを用いて実行する。<br>例として、C言語のファイルをコンパイルするには、以下のようなコマンドを実行すればよい。</p>
-                    <pre>$ gcc ファイル名.c -o 実行ファイル名</pre>
-                    <p>このコマンドの詳しい内容は、後ほど説明する。</p>
-                </section>
-                <section>
-                    <img src="../img/c/lecture1/compiler.png">
-                    <p>また、この段階でソースファイルの記述に誤りがある場合、画面上にエラーメッセージが表示されるため、<span class="bold">デバック(debug)</span>というソースコードの間違いを修正する作業をする必要がある。</p>
-                </section>
-                <section id="section5">
-                    <h3 class="sub_heading">3. プログラムの実行</h3>
+                    <h3 class="sub_heading">3. </h3>
                     <p>上記の手順が終了したら、いよいよプログラムを実行できる状態になる。2. コンパイルで生成された<span class="bold">実行ファイル(Executable file)</span>を以下のようなコマンドで指定して実行する。</p>
                     <pre>$ ./実行ファイル名</pre>
                     <p>この段階で実行結果か期待通りのものでなければ、再度手順1に戻りソースコードを修正する。</p>

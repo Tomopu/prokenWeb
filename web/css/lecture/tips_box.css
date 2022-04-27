@@ -3,7 +3,7 @@
 .tips_box {
     position: relative;
     padding: 13px 15px;
-    margin: 20px 0;
+    margin: 20px 0 15px 0;
     border: 2.5px solid #84ccc4;
     border-radius: 6px;
 }

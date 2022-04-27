@@ -57,6 +57,10 @@ main img {
     border-radius: 6px;
 }
 
+main .in_section{
+    margin: 10px 0 5px 0;
+}
+
 main h1, main h3, main h4, main p, main li, pre{
     color: #485c64;
 }
@@ -85,6 +89,10 @@ article {
 
 main section {
     margin: 20px 0 35px 0;
+}
+
+main ul {
+    margin: 10px 30px;
 }
 
 main section li {

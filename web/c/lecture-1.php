@@ -109,10 +109,11 @@ main:
     }
     
     int main(void){
-        int x = 0;
-        int y = 10;
+        // int x = 0;
+        /* int y = 10;
         int ans = calc(x, y);
-
+        */
+        int	 printf(const char * __restrict, ...) __printflike(1, 2);
         printf("%d + %d = %d", x, y, ans);
         return 0;
     }
