@@ -120,6 +120,8 @@ $permit = $_SESSION['permit'];
                 <li><a href="./download/lecture4.pdf">第4回 さまざまな演算 (pdf)</a></li>
                 <li><a href="./download/lecture5.pdf">第5回 条件分岐 (pdf)</a></li>
                 <li><a href="">準備中</a></li>
+                <br>
+                <li><a href="./download/C言語基礎講習会用資料10.pptx">魔法少女によるC言語講習会? (created by 大先輩)<a></li>
             </section>
             
             <section>
