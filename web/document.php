@@ -129,7 +129,9 @@ $permit = $_SESSION['permit'];
                     if(isset($_SESSION['userid']) && ($permit == 0 || $permit == 1)){
                         echo '<a href="https://www.youtube.com/watch?v=HO4F9oRH8EQ">+動画(YouTube)</a>';
                     }else {
-                        echo '<a href="">+動画(ログインしてください)</a>';
+                        // echo '<a href="">+動画(ログインしてください)</a>';
+                        echo '<a href="https://www.youtube.com/watch?v=HO4F9oRH8EQ">+動画(YouTube)</a>';
+
                     }
                 ?>
                 </li>
