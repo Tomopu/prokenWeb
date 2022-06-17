@@ -7,15 +7,9 @@ services:
          dockerfile: ./web/Dockerfile
       volumes:
          - ./web:/var/www/html
-      environment:
-         - VIRTUAL_HOST=nitkpc.com
-         - LETSENCRYPT_HOST=nitkpc.com
-      networks:
-         - proxy-network
-         - db-network
       ports:
          - 8080:80
-      restart: always
+      restert: always
       container_name: myweb
    mydb:
       image: mysql:latest
@@ -27,17 +21,8 @@ services:
          - MYSQL_DATABASE=members
          - MYSQL_USER=admin
          - MYSQL_PASSWORD=fugafuga
-      networks:
-         - db-network
       ports:
          - 3306:3306
       restart: always
       container_name: mydb
-
-
-networks:
-   default:
-   proxy-network:
-      external: true
-   db-network:
 
