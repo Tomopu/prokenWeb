@@ -119,6 +119,20 @@ $permit = $_SESSION['permit'];
                 <li><a href="./download/lecture3.pdf">第3回 変数 (pdf)</a></li>
                 <li><a href="./download/lecture4.pdf">第4回 さまざまな演算 (pdf)</a></li>
                 <li><a href="./download/lecture5.pdf">第5回 条件分岐 (pdf)</a></li>
+                <li><a href="./download/lecture6.pdf">第6回 繰り返し処理 (pdf)</a></li>
+                <li><a href="./download/lecture7-1.pdf">第7-1回 関数1 (pdf)</a></li>
+                <li><a href="./download/lecture7-2.pdf">第7-2回 関数2 (pdf)</a> <a href="./download/lecture7-2.pdf">+補足資料 (pdf)</a></li>
+                <li><a href="./download/lecture8.pdf">第8回 配列(pdf)</a></li>
+                <li><a href="./download/lecture9.pdf">第9回 ポインタ</a></li>
+                <li><a href="./download/lecture10.pdf">第10回 キーボードからの入力</a>
+                <?php
+                    if(isset($_SESSION['userid']) && ($permit == 0 || $permit == 1)){
+                        echo '<a href="https://www.youtube.com/watch?v=HO4F9oRH8EQ">+動画(YouTube)</a>';
+                    }else {
+                        echo '<a href="">+動画(ログインしてください)</a>';
+                    }
+                ?>
+                </li>
                 <li><a href="">準備中</a></li>
                 <br>
                 <li><a href="./download/C言語基礎講習会用資料10.pptx">魔法少女によるC言語講習会? (created by 大先輩)<a></li>

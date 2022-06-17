@@ -9,7 +9,7 @@ services:
          - ./web:/var/www/html
       ports:
          - 8080:80
-      restert: always
+      restart: always
       container_name: myweb
    mydb:
       image: mysql:latest
