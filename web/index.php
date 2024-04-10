@@ -21,7 +21,7 @@ $permit = $_SESSION['permit'];
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/toppage/style.css">
     
-    <title>釧路高専　プログラミング研究会</title>
+    <title>釧路高専　プログラミング研究部</title>
 </head>
 <body>
     <div id="header_set">
@@ -97,8 +97,8 @@ $permit = $_SESSION['permit'];
     
     <div id="main_visual"> 
         <div id="visual_title">
-            <h1 class="large_title"><span>釧路高専</span> <span>プログラミング研究会</span></h1>
-            <h3 class="small_title"><span>National Institute of Technology</span> <span>Kushiro College</span> <span>Programming Circle</span></h3>
+            <h1 class="large_title"><span>釧路高専</span> <span>プログラミング研究部</span></h1>
+            <h3 class="small_title"><span>National Institute of Technology</span> <span>Kushiro College</span> <span>Programming Club</span></h3>
             <h2 class="catchphrase">学ぶって、楽しい。</h2>
         </div>
         <div id="visual_img">
@@ -214,7 +214,7 @@ $permit = $_SESSION['permit'];
                     </tr>
                     <tr>
                         <th>活動時間</th>
-                        <td>16:40 ~ 18:00　(放課後)</td>
+                        <td>16:20 ~ 18:00　(放課後)</td>
                     </tr>
                     <tr>
                         <th>活動場所</th>
@@ -227,7 +227,7 @@ $permit = $_SESSION['permit'];
                 </table>
                 
             </article>
-
+            
             <img class="wave" src="img/toppage/wave.svg">
             <article id="article3">
                 <section id="section3">
